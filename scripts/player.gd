@@ -45,6 +45,7 @@ class_name Player
 
 # Movement - Controls how fast the player moves
 @export var move_speed: float = 200.0
+<<<<<<< Updated upstream
 
 
 var facing: Vector2 = Vector2.ZERO
@@ -80,6 +81,19 @@ func _ready():
 	collision_layer = 1
 	collision_mask = 2 | 8  # Collide with enemies (layer 2) and XP drops (layer 8)
 
+=======
+@export var maxHealth : int = 10
+@export var health : int = maxHealth
+@export var coins : int = 0
+@export var Torch_Held : String 
+
+var facing: Vector2 = Vector2.ZERO
+
+func _ready():
+	print("Player is ready!")
+	# TODO: Add detailed character info display (Lesson 1)
+	emit_signal(Torch_Held)
+>>>>>>> Stashed changes
 func _physics_process(_delta):
 	handle_movement()
 
@@ -97,9 +111,14 @@ func handle_movement():
 	# Apply movement using Godot's built-in physics
 	velocity = direction * move_speed
 	move_and_slide()
+<<<<<<< Updated upstream
 
 ## Update sprite animation based on movement direction
 ## Handles 4-directional sprites with idle and walk states
+=======
+	
+# BAD QUICK CODE MAYBE CHANGE
+>>>>>>> Stashed changes
 func handle_sprite(direction: Vector2) -> void:
 	var prefix: String = "walk"
 	if direction == Vector2.ZERO:
@@ -118,7 +137,20 @@ func handle_sprite(direction: Vector2) -> void:
 		animated_sprite.play(prefix + "_side")
 		animated_sprite.flip_h = false
 
+<<<<<<< Updated upstream
 # ========== CHARACTER METHODS ==========
+=======
+func collect_pickup(_type : String, _amount : int):
+	if _type == "coin":
+		coins += _amount
+		print("Coins: " + str(coins))
+	elif _type == "health_potion":
+		change_health(_amount)
+		
+	elif _type == "torch":
+		emit_signal(Torch_Held)
+		
+>>>>>>> Stashed changes
 
 ## Take damage from enemies or hazards
 ## Returns true if this damage killed the player
