@@ -8,8 +8,14 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jig8b"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 shader = ExtResource("2_wnlwo")
 shader_parameter/color = Color(0.7819218, 0.7083258, 0.2478461, 1)
+=======
+resource_local_to_scene = true
+shader = ExtResource("2_wnlwo")
+shader_parameter/color = Color(0.756816, 0.156731, 0.693511, 1)
+>>>>>>> Stashed changes
 =======
 resource_local_to_scene = true
 shader = ExtResource("2_wnlwo")
@@ -38,7 +44,11 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kfxoj"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 radius = 4.1231055
+=======
+radius = 4.12311
+>>>>>>> Stashed changes
 =======
 radius = 4.12311
 >>>>>>> Stashed changes
@@ -82,9 +92,15 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 "transitions": PackedFloat32Array(2.2973945, 3.03143),
 "update": 0,
 "values": [0.0, 6.283185307179586]
+=======
+"transitions": PackedFloat32Array(2.29739, 3.03143),
+"update": 0,
+"values": [0.0, 6.28319]
+>>>>>>> Stashed changes
 =======
 "transitions": PackedFloat32Array(2.29739, 3.03143),
 "update": 0,
@@ -127,7 +143,13 @@ _data = {
 [node name="Coin" type="Area2D"]
 script = ExtResource("1_d14el")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 color = Color(0.7819218, 0.7083258, 0.2478461, 1)
+=======
+color = Color(0.756816, 0.156731, 0.693511, 1)
+type = "coin"
+label = "copper"
+>>>>>>> Stashed changes
 =======
 color = Color(0.756816, 0.156731, 0.693511, 1)
 type = "coin"
@@ -141,6 +163,10 @@ animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+visible = false
+>>>>>>> Stashed changes
 =======
 visible = false
 >>>>>>> Stashed changes

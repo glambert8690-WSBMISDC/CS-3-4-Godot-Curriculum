@@ -1,6 +1,7 @@
 {
   "sample_items": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     {
       "id": "health_potion",
       "name": "Health Potion",
@@ -90,6 +91,8 @@
       "rarity": "epic"
     }
 =======
+=======
+>>>>>>> Stashed changes
 	{
 	  "id": "health_potion",
 	  "name": "Health Potion",
@@ -178,6 +181,9 @@
 	  "mana_bonus": 0,
 	  "rarity": "epic"
 	}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ]
 }

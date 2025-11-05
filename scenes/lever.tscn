@@ -57,6 +57,10 @@ sprite_frames = SubResource("SpriteFrames_igrgq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+visible = false
+>>>>>>> Stashed changes
 =======
 visible = false
 >>>>>>> Stashed changes

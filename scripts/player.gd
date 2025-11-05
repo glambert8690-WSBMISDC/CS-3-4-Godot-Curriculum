@@ -73,6 +73,9 @@ func handle_movement():
 	
 # BAD QUICK CODE MAYBE CHANGE
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 func handle_sprite(direction: Vector2) -> void:
 	var prefix: String = "walk"
@@ -93,6 +96,7 @@ func handle_sprite(direction: Vector2) -> void:
 		animated_sprite.flip_h = false
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # TODO: Add character methods here (Lesson 2)
 # - take_damage()
 # - heal()
@@ -100,6 +104,8 @@ func handle_sprite(direction: Vector2) -> void:
 # - attack()
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 # ========== CHARACTER METHODS ==========
 =======
 func collect_pickup(_type : String, _amount : int):

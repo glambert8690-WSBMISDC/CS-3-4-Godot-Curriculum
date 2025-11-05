@@ -8,13 +8,19 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1a2b3"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 size = Vector2(17, 20)
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 size = Vector2(16, 37)
 =======
 size = Vector2(17, 26.5)
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt4gq"]
@@ -286,14 +292,20 @@ script = ExtResource("1_4x8vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(-1.5, 14)
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 position = Vector2(-2, 0.5)
 =======
 visible = false
 position = Vector2(-0.5, -7.75)
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_1a2b3")
 

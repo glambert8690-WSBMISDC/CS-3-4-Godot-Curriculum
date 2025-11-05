@@ -1,23 +1,32 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=3 uid="uid://b4cu88av4u6ly"]
 
 [ext_resource type="Script" uid="uid://co5hnowm81a7y" path="res://scripts/enemies/enemy_base.gd" id="1_e74jq"]
 [ext_resource type="Texture2D" uid="uid://b85d5s3i3t768" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_1.png" id="2_0gpyn"]
 =======
+=======
+>>>>>>> Stashed changes
 [gd_scene load_steps=5 format=3 uid="uid://b4cu88av4u6ly"]
 
 [ext_resource type="Script" uid="uid://biopq2aedkgwh" path="res://scripts/npc.gd" id="1_0gpyn"]
 [ext_resource type="Texture2D" uid="uid://b85d5s3i3t768" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_1.png" id="2_0gpyn"]
 [ext_resource type="PackedScene" uid="uid://l7oauc6tswy3" path="res://scenes/enemies/detection_radius.tscn" id="3_nwq87"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbebl"]
 size = Vector2(11, 14)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="EnemyBase" type="StaticBody2D"]
 script = ExtResource("1_e74jq")
 =======
+=======
+>>>>>>> Stashed changes
 [node name="EnemyBase" type="CharacterBody2D"]
 script = ExtResource("1_0gpyn")
 damage_cooldown = null
@@ -32,6 +41,9 @@ inventory = null
 inventory_drop = null
 type = null
 target = null
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -41,6 +53,11 @@ shape = SubResource("RectangleShape2D_rbebl")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_0gpyn")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+[node name="Detection Radius" parent="." instance=ExtResource("3_nwq87")]
+>>>>>>> Stashed changes
 =======
 
 [node name="Detection Radius" parent="." instance=ExtResource("3_nwq87")]
