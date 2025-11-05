@@ -74,6 +74,9 @@ func handle_movement():
 # BAD QUICK CODE MAYBE CHANGE
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -97,6 +100,7 @@ func handle_sprite(direction: Vector2) -> void:
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # TODO: Add character methods here (Lesson 2)
 # - take_damage()
 # - heal()
@@ -104,6 +108,8 @@ func handle_sprite(direction: Vector2) -> void:
 # - attack()
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 # ========== CHARACTER METHODS ==========

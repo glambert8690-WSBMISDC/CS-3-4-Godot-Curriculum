@@ -2,6 +2,7 @@
   "sample_items": [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     {
       "id": "health_potion",
       "name": "Health Potion",
@@ -93,6 +94,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 	{
 	  "id": "health_potion",
 	  "name": "Health Potion",
@@ -182,6 +185,9 @@
 	  "rarity": "epic"
 	}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

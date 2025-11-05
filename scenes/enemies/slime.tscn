@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=10 format=3 uid="uid://c6gaa4kprawy0"]
 
 [ext_resource type="Script" uid="uid://co5hnowm81a7y" path="res://scripts/enemies/enemy_base.gd" id="1_ahq63"]
@@ -8,6 +9,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbebl"]
 size = Vector2(11, 10)
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 [gd_scene load_steps=11 format=3 uid="uid://c6gaa4kprawy0"]
@@ -19,6 +22,9 @@ size = Vector2(11, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbebl"]
 size = Vector2(133.726, 35.3186)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -68,6 +74,7 @@ animations = [{
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="EnemyBase" type="StaticBody2D"]
 script = ExtResource("1_ahq63")
 
@@ -81,6 +88,8 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.10445527
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 [node name="slime" type="CharacterBody2D"]
@@ -117,6 +126,9 @@ scale = Vector2(5.6758, -5.16922)
 [connection signal="body_entered" from="Detection Radius" to="." method="_on_detection_radius_body_entered"]
 [connection signal="body_exited" from="Detection Radius" to="." method="_on_detection_radius_body_exited"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

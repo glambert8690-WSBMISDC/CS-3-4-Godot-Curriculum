@@ -2,7 +2,11 @@
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://scripts/spike.gd" id="1_h46uk"]
+=======
+[ext_resource type="Script" uid="uid://6sk823fmmntx" path="res://scripts/spike.gd" id="1_h46uk"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="Script" uid="uid://6sk823fmmntx" path="res://scripts/spike.gd" id="1_h46uk"]
 >>>>>>> Stashed changes
@@ -47,6 +51,10 @@ frame = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+visible = false
+>>>>>>> Stashed changes
 =======
 visible = false
 >>>>>>> Stashed changes
