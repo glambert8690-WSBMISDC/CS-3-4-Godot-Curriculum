@@ -56,4 +56,8 @@ script = ExtResource("1_4kwec")
 sprite_frames = SubResource("SpriteFrames_igrgq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< Updated upstream
+=======
+visible = false
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_jxk16")

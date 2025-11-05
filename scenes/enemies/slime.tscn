@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=10 format=3 uid="uid://c6gaa4kprawy0"]
 
 [ext_resource type="Script" uid="uid://co5hnowm81a7y" path="res://scripts/enemies/enemy_base.gd" id="1_ahq63"]
@@ -5,6 +6,16 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbebl"]
 size = Vector2(11, 10)
+=======
+[gd_scene load_steps=11 format=3 uid="uid://c6gaa4kprawy0"]
+
+[ext_resource type="Script" uid="uid://biopq2aedkgwh" path="res://scripts/npc.gd" id="1_4h4y0"]
+[ext_resource type="Texture2D" uid="uid://barrcryhoe1ep" path="res://assets/Platformer Slimes v1.3/Ogre Slime Spritesheet.png" id="2_ahq63"]
+[ext_resource type="PackedScene" uid="uid://l7oauc6tswy3" path="res://scenes/enemies/detection_radius.tscn" id="3_b58ev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbebl"]
+size = Vector2(133.726, 35.3186)
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4h4y0"]
 atlas = ExtResource("2_ahq63")
@@ -49,6 +60,7 @@ animations = [{
 "speed": 6.0
 }]
 
+<<<<<<< Updated upstream
 [node name="EnemyBase" type="StaticBody2D"]
 script = ExtResource("1_ahq63")
 
@@ -61,3 +73,38 @@ sprite_frames = SubResource("SpriteFrames_uhx0m")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.10445527
+=======
+[node name="slime" type="CharacterBody2D"]
+script = ExtResource("1_4h4y0")
+move_points = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1.90139e-06, 0.750003)
+rotation = 3.14159
+scale = Vector2(0.127126, -0.467176)
+shape = SubResource("RectangleShape2D_rbebl")
+one_way_collision = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_uhx0m")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.104455
+
+[node name="Hitbox" parent="." instance=ExtResource("3_b58ev")]
+visible = false
+position = Vector2(0, -4.16922)
+scale = Vector2(1.3347, 1.40084)
+
+[node name="Detection Radius" parent="." instance=ExtResource("3_b58ev")]
+visible = false
+position = Vector2(0, 1)
+scale = Vector2(5.6758, -5.16922)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_detection_radius_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_detection_radius_body_exited"]
+[connection signal="body_entered" from="Detection Radius" to="." method="_on_detection_radius_body_entered"]
+[connection signal="body_exited" from="Detection Radius" to="." method="_on_detection_radius_body_exited"]
+>>>>>>> Stashed changes

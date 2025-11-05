@@ -19,7 +19,11 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lwb0h"]
+<<<<<<< Updated upstream
 radius = 1.6492422
+=======
+radius = 1.64924
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_gan2x"]
 length = 0.001
@@ -59,9 +63,15 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
+<<<<<<< Updated upstream
 "transitions": PackedFloat32Array(2.2973945, 3.03143),
 "update": 0,
 "values": [0.0, 6.283185307179586]
+=======
+"transitions": PackedFloat32Array(2.29739, 3.03143),
+"update": 0,
+"values": [0.0, 6.28319]
+>>>>>>> Stashed changes
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -98,12 +108,22 @@ _data = {
 
 [node name="HealthPotion" type="Area2D"]
 script = ExtResource("1_np0hw")
+<<<<<<< Updated upstream
+=======
+amount = 5
+type = "health_potion"
+label = "small"
+>>>>>>> Stashed changes
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mlk75")
 animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< Updated upstream
+=======
+visible = false
+>>>>>>> Stashed changes
 scale = Vector2(2.5, 2.5)
 shape = SubResource("CircleShape2D_lwb0h")
 

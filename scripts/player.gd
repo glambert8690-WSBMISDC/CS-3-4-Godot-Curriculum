@@ -6,6 +6,7 @@ class_name Player
 
 # Movement - Controls how fast the player moves
 @export var move_speed: float = 200.0
+<<<<<<< Updated upstream
 
 
 var facing: Vector2 = Vector2.ZERO
@@ -23,7 +24,28 @@ func _ready():
 	print("Player is ready!")
 	# TODO: Add detailed character info display (Lesson 1)
 
+<<<<<<< Updated upstream
 func _physics_process(delta):
+=======
+	# Set collision layers (Layer 1 = player)
+	collision_layer = 1
+	collision_mask = 2 | 8  # Collide with enemies (layer 2) and XP drops (layer 8)
+
+=======
+@export var maxHealth : int = 10
+@export var health : int = maxHealth
+@export var coins : int = 0
+@export var Torch_Held : String 
+
+var facing: Vector2 = Vector2.ZERO
+
+func _ready():
+	print("Player is ready!")
+	# TODO: Add detailed character info display (Lesson 1)
+	emit_signal(Torch_Held)
+>>>>>>> Stashed changes
+func _physics_process(_delta):
+>>>>>>> Stashed changes
 	handle_movement()
 
 func handle_movement():
@@ -40,8 +62,18 @@ func handle_movement():
 	# Apply movement using Godot's built-in physics
 	velocity = direction * move_speed
 	move_and_slide()
+<<<<<<< Updated upstream
 
+<<<<<<< Updated upstream
 # BAD QUICK CODE MAYBE CHANGE
+=======
+## Update sprite animation based on movement direction
+## Handles 4-directional sprites with idle and walk states
+=======
+	
+# BAD QUICK CODE MAYBE CHANGE
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 func handle_sprite(direction: Vector2) -> void:
 	var prefix: String = "walk"
 	if direction == Vector2.ZERO:
@@ -60,8 +92,126 @@ func handle_sprite(direction: Vector2) -> void:
 		animated_sprite.play(prefix + "_side")
 		animated_sprite.flip_h = false
 
+<<<<<<< Updated upstream
 # TODO: Add character methods here (Lesson 2)
 # - take_damage()
 # - heal()
 # - level_up()
 # - attack()
+=======
+<<<<<<< Updated upstream
+# ========== CHARACTER METHODS ==========
+=======
+func collect_pickup(_type : String, _amount : int):
+	if _type == "coin":
+		coins += _amount
+		print("Coins: " + str(coins))
+	elif _type == "health_potion":
+		change_health(_amount)
+		
+	elif _type == "torch":
+		emit_signal(Torch_Held)
+		
+>>>>>>> Stashed changes
+
+## Take damage from enemies or hazards
+## Returns true if this damage killed the player
+func take_damage(amount: float) -> bool:
+	current_health -= amount
+	current_health = max(0, current_health)
+	health_changed.emit(current_health, max_health)
+
+	if current_health <= 0:
+		die()
+		return true
+
+	return false
+
+
+## Heal the player
+## Returns true if healing was applied (false if already at full health)
+func heal(amount: float) -> bool:
+	if current_health >= max_health:
+		return false
+
+	current_health += amount
+	current_health = min(max_health, current_health)
+	health_changed.emit(current_health, max_health)
+
+	return true
+
+
+## Gain experience points
+## Returns true if this XP gain caused a level up
+func gain_experience(amount: float) -> bool:
+	current_xp += amount
+	xp_changed.emit(current_xp, xp_to_next_level)
+
+	# Check if leveled up
+	var did_level_up = false
+	while current_xp >= xp_to_next_level:
+		level_up_character()
+		did_level_up = true
+
+	return did_level_up
+
+
+## Level up the character
+## Returns true on successful level up
+func level_up_character() -> bool:
+	level += 1
+	current_xp -= xp_to_next_level
+	xp_to_next_level = calculate_xp_for_next_level()
+
+	# Heal on level up
+	current_health = max_health
+	health_changed.emit(current_health, max_health)
+
+	# Update XP bar to show reset
+	xp_changed.emit(current_xp, xp_to_next_level)
+
+	print("🎉 LEVEL UP! Now level " + str(level))
+	print("XP to next level: " + str(xp_to_next_level))
+
+	# Emit signal to show upgrade selection UI
+	level_up.emit(level)
+
+	return true
+
+
+## Calculate XP needed for the next level (exponential scaling)
+func calculate_xp_for_next_level() -> float:
+	return 100.0 + (level - 1) * 50.0  # 100, 150, 200, 250, etc.
+
+
+## Handle player death
+## Returns true when death is handled
+func die() -> bool:
+	print(character_name + " has died!")
+	player_died.emit()
+	# Disable player controls
+	set_physics_process(false)
+	# Hide or play death animation
+	visible = false
+
+	return true
+
+
+# ========== STAT UPGRADE METHODS (Called from UI) ==========
+
+
+## Upgrade max health
+## Returns true on successful upgrade
+func upgrade_health(amount: float) -> bool:
+	max_health += amount
+	current_health += amount  # Also heal when upgrading
+	health_changed.emit(current_health, max_health)
+	return true
+
+
+## Upgrade movement speed
+## Returns true on successful upgrade
+func upgrade_speed(amount: float) -> bool:
+	move_speed += amount
+	return true
+>>>>>>> Stashed changes
